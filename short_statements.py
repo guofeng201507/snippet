@@ -16,3 +16,14 @@ for count, filename in enumerate(os.listdir(peta_dataset.root)):
     os.rename(src, dst) 
     i = i + 1
    
+#create dataframe from array
+import pandas as pd
+import numpy as np
+    >>data.shape
+    (480,193)
+    >>type(data)
+    numpy.ndarray
+df=pd.DataFrame(data=data[0:,0:],
+    ...        index=[i for i in range(data.shape[0])],
+    ...        columns=['f'+str(i) for i in range(data.shape[1])])
+    >>df.head()
