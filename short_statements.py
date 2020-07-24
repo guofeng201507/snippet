@@ -30,4 +30,5 @@ df=pd.DataFrame(data=data[0:,0:],
 
     
 #find the longest sentencce
+prideSentenceLengths = [len(sent) for sent in prideSents]
 [sent for sent in prideSents if len(sent) == max(prideSentenceLengths)]
