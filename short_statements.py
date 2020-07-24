@@ -27,3 +27,7 @@ df=pd.DataFrame(data=data[0:,0:],
     ...        index=[i for i in range(data.shape[0])],
     ...        columns=['f'+str(i) for i in range(data.shape[1])])
     >>df.head()
+
+    
+#find the longest sentencce
+[sent for sent in prideSents if len(sent) == max(prideSentenceLengths)]
