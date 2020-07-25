@@ -32,3 +32,14 @@ df=pd.DataFrame(data=data[0:,0:],
 #find the longest sentencce
 prideSentenceLengths = [len(sent) for sent in prideSents]
 [sent for sent in prideSents if len(sent) == max(prideSentenceLengths)]
+
+#re-order the dataframe with expected list of columns
+expected_columns = ["a", "b"]
+df = df[expected_columns]
+
+#giving file name as running number with fix length (6 digit)
+[f'{100000 + i + 1:06}.png' for i in range(19000)]
+
+
+
+
