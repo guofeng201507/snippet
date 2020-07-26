@@ -40,6 +40,17 @@ df = df[expected_columns]
 #giving file name as running number with fix length (6 digit)
 [f'{100000 + i + 1:06}.png' for i in range(19000)]
 
+#generate list
+list_19000 = [x for x in range(19000)]
+
+#pickle
+    with open(peta_pkl_file, 'rb') as handle:
+        peta_data_info = pickle.load(handle)
 
 
-
+    with open(pa100k_peta_pkl_file, 'wb') as handle:
+        pickle.dump(peta_data_info, handle, protocol=pickle.HIGHEST_PROTOCOL)
+        
+ #shuffle list
+import random
+random.shuffle(list_100k)
