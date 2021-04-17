@@ -54,3 +54,12 @@ list_19000 = [x for x in range(19000)]
  #shuffle list
 import random
 random.shuffle(list_100k)
+
+#converting values to numeric classes start from 0
+age_map = {val:ii for ii,val in enumerate(set(users['Age']))}
+users['Age'] = users['Age'].map(age_map)
+
+#select columns from DF based on title
+users = users.filter(regex='UserID|Gender|Age|JobID')
+
+
